@@ -1,11 +1,17 @@
 public class Main {
-    public static final int ourDiamond = 10;
+    public static int ourDiamond = -1;
     public static boolean switchTime = false;
 
     public static void main(String[] args) {
 	// write your code here
+
+        ourDiamond = 10;
         DiamondPrint2(10);
         DiamondPrint1(9);
+
+
+        printLargerNumFirst(10);
+        printSmallerNumFirst(10);
 
     }
 
@@ -42,6 +48,25 @@ public class Main {
         }
         System.out.println();
 
+    }
+    public static void printLargerNumFirst(int input){
+        if (input <= 0) {
+            System.out.println();
+            return;
+
+        }
+        System.out.print(input + ", ");
+        printLargerNumFirst(input -1);
+    }
+
+    public static void printSmallerNumFirst(int input){
+        if (input <= 0) {
+            System.out.println();
+            return;
+        }
+        printSmallerNumFirst(input-1);
+
+        System.out.print(input + ", ");
     }
 
 }
