@@ -1,6 +1,9 @@
+//Created by Sean Dunn,  April 14, 2017
+
 public class Main {
     public static int ourDiamond = -1;
     public static boolean switchTime = false;
+
 
     public static void main(String[] args) {
 	// write your code here
